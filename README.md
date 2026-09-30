@@ -1,53 +1,85 @@
-# JanSetu — agent-ready project harness
+<div align="center">
+  <img src="public/favicon.svg" alt="JanSetu Logo" width="100" />
+  <h1>JanSetu</h1>
+  <p><strong>Citizen voices inform public investment.</strong></p>
+  <p><em>AI for Digital Public Infrastructure & Governance — Build with AI: Code for Communities</em></p>
+</div>
 
-**Current deliverable: an executable blueprint and project memory, not a built application.**
+<br />
 
-JanSetu turns multilingual citizen development requests into evidence-linked infrastructure proposals. This folder gives Antigravity or another coding agent a defined destination, implementation contracts, ordered tasks, persistent memory, and verification gates.
+## 🌟 The Problem: Citizen requests stop short of planning
+"Our water supply is unreliable." — A resident has described a need. But for local governments and urban planners, the investment decision still needs context:
+- **Which locality?** Reports need consistent geographic context.
+- **How serious is the gap?** Service indicators give the request perspective.
+- **What is already planned?** Existing investment can change the next action.
 
-## Begin here
+Without this context, community voices get lost in bureaucratic silos, qualitative feedback is ignored, and redundant funding wastes taxpayer money.
 
-1. Open this entire folder in your coding agent.
-2. Paste the instruction in [START_HERE.md](START_HERE.md).
-3. The agent reads [AGENTS.md](AGENTS.md), [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md), and the next task's referenced files.
-4. It builds, tests, records evidence, updates state, and proceeds to the next eligible task.
+## 🚀 The Solution: The Citizen-to-Project Workflow
+JanSetu bridges the gap between grassroots voices and data-driven urban planning. We use AI to convert unstructured, multilingual community reports into structured, quantified, and prioritized project briefs for local officials.
 
-The harness does not start agents or install software by itself. Navigation files work even when an editor does not automatically load repository instructions. Explicitly point the agent at START_HERE.md.
+1. **Citizen Request:** Citizens describe a community need in their native language (e.g., Hindi or English) and select their locality.
+2. **Confirmed Meaning:** Google Gemini AI extracts the category, urgency, and actionable evidence while strictly redacting PII. The citizen reviews the summary before it enters planning.
+3. **Local Priority:** JanSetu deterministically combines related reports and ranks them against existing public data (e.g., service gaps, population density, and currently funded plans).
+4. **Project Proposal:** Officials inspect an automatically generated, evidence-backed project brief and decide what to verify and fund.
 
-## Available commands now
+## 🧠 Google AI gives requests a usable structure
+We leverage **Google Gemini** for:
+- **Structured Extraction:** Hindi and English input becomes a consistent, reviewable record.
+- **Evidence-based Drafting:** Generates an evidence packet that grounds a brief in reports, indicators, and existing plans.
 
-Requires Node.js 22 or newer; no package installation is needed for the harness.
+> **Code calculates the score. People make the decision.**
 
-```text
-node scripts/harness.mjs validate
-node scripts/harness.mjs status
-node scripts/harness.mjs next
-node scripts/harness.test.mjs
-```
+## 🛡️ Trust by Design
+Every recommendation stays inspectable.
+- **Citizens confirm meaning:** A correction step protects against a mistaken category or locality.
+- **Missing data stays visible:** An incomplete indicator produces a review state, not a guessed score.
+- **Evidence stays attached:** Analysts can inspect report excerpts and the source of each indicator.
+- **People retain authority:** The system proposes planning actions. Officials remain responsible for decisions.
 
-Application commands will be created and verified during P01. Do not interpret their specifications as evidence that the application already runs.
+## 🏗️ Architecture & Tech Stack
+A small, scalable, and deployable architecture designed for portability across Indian states.
 
-## Map
+| Layer | Technology | Role |
+| :--- | :--- | :--- |
+| **Interface** | React, Vite | Citizen intake and analyst review (Hindi & English) |
+| **API Backend** | Node.js, Express | Validation, grouping, and deterministic scoring |
+| **AI Engine** | Google Gemini SDK | Extraction and proposal drafting |
+| **Database** | SQLite (`sql.js`) | Isolated workspaces, reports, plans, provenance |
 
-| Need | Authoritative file |
-|---|---|
-| Agent operating rules | [AGENTS.md](AGENTS.md) |
-| Session orientation and resumption | [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) |
-| Machine-readable task progress | [harness/state.json](harness/state.json) |
-| Requirements and track coverage | [PROJECT_BRIEF.md](PROJECT_BRIEF.md), [REQUIREMENTS.md](REQUIREMENTS.md) |
-| Scope and release boundaries | [MVP_SCOPE.md](MVP_SCOPE.md) |
-| Build order and task acceptance | [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md), [harness/tasks.json](harness/tasks.json) |
-| Design and tools | [ARCHITECTURE.md](ARCHITECTURE.md), [TECH_STACK.md](TECH_STACK.md) |
-| Product contracts | [API_SPEC.md](API_SPEC.md), [DATABASE_SCHEMA.md](DATABASE_SCHEMA.md), [AI_SPEC.md](AI_SPEC.md) |
-| Interface and journeys | [UI_UX_SPEC.md](UI_UX_SPEC.md), [USER_FLOWS.md](USER_FLOWS.md) |
-| Verification and recovery | [TEST_PLAN.md](TEST_PLAN.md), [RUNBOOK.md](RUNBOOK.md) |
-| Privacy, deployment, risks | [SECURITY.md](SECURITY.md), [DEPLOYMENT.md](DEPLOYMENT.md), [KNOWN_RISKS.md](KNOWN_RISKS.md) |
-| Why decisions were made | [DECISIONS.md](DECISIONS.md) |
-| Submission assets to produce | [submission/PLAN.md](submission/PLAN.md) |
-| Source interpretation | [SOURCES.md](SOURCES.md) |
-| Blueprint verification and limits | [harness/BLUEPRINT_AUDIT.md](harness/BLUEPRINT_AUDIT.md) |
+## 🚀 Running Locally
 
-## Completion means evidence
+### Prerequisites
+- Node.js (v20+)
+- A Google Gemini API Key
 
-Passing the harness validator means the blueprint is internally usable. It does **not** prove the app, Gemini integration, deployment, video, or deck works. Product tasks begin as pending. Release requires the independent evidence in TEST_PLAN.md and submission/PLAN.md.
+### Setup
+1. Clone the repository
+   ```bash
+   git clone https://github.com/mohdaliazam/JanSetu.git
+   cd JanSetu
+   ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Set up your environment variables
+   Create a `.env` file in the root directory:
+   ```env
+   GEMINI_API_KEY="your_api_key_here"
+   AI_MODE="live"
+   NODE_ENV="development"
+   ```
+4. Start the application
+   ```bash
+   npm run dev
+   ```
+5. Open `http://localhost:5173` in your browser.
 
-Do not place API keys or personal citizen data in these files. The templates contain no credentials. The sample dataset is wholly synthetic.
+## 🌐 Live Deployment
+JanSetu is fully configured to be deployed as a Docker container or via a Render Blueprint (`render.yaml`). A persistent disk is used to ensure all civic data remains secure and persistent.
+
+---
+<div align="center">
+  <i>Built with ❤️ for the Code for Communities Hackathon</i>
+</div>
