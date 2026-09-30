@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: jansetu
+    env: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: AI_MODE
+        value: live
+      - key: GEMINI_API_KEY
+        sync: false # Requires manual entry in the dashboard
+      - key: DATA_DIR
+        value: /data
+    disk:
+      name: jansetu-data
+      mountPath: /data
+      sizeGB: 1

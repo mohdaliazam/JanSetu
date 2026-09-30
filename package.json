@@ -13,7 +13,7 @@
     "test:e2e": "playwright test",
     "test:ai:live": "AI_MODE=live vitest run tests/ai/",
     "build": "vite build && tsc -p tsconfig.server.json --outDir dist/server",
-    "start": "node dist/server/index.js",
+    "start": "node dist/server/server/index.js",
     "db:migrate": "tsx src/server/db/migrate.ts",
     "verify": "npm run typecheck && npm run lint && npm run test && npm run build"
   },
