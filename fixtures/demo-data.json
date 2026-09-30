@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "sources": [{"id": "SRC-DEMO-01", "kind": "synthetic", "title": "JanSetu invented hackathon sample", "url": null, "licence": null, "as_of": "2026-09-30", "caveat": "Invented values and fictional localities; not official data and not representative estimates."}],
+  "localities": [
+    {"id": "IN-BR-PAT-L01", "district_id": "IN-BR-PAT", "district_name": "Patna", "state_code": "BR", "state_name": "Bihar", "name": "Demo River Ward", "synthetic": true},
+    {"id": "IN-BR-PAT-L02", "district_id": "IN-BR-PAT", "district_name": "Patna", "state_code": "BR", "state_name": "Bihar", "name": "Demo Market Ward", "synthetic": true},
+    {"id": "IN-MH-PUN-L01", "district_id": "IN-MH-PUN", "district_name": "Pune", "state_code": "MH", "state_name": "Maharashtra", "name": "Demo Hill Ward", "synthetic": true},
+    {"id": "IN-MH-PUN-L02", "district_id": "IN-MH-PUN", "district_name": "Pune", "state_code": "MH", "state_name": "Maharashtra", "name": "Demo Garden Ward", "synthetic": true},
+    {"id": "IN-TN-MAD-L01", "district_id": "IN-TN-MAD", "district_name": "Madurai", "state_code": "TN", "state_name": "Tamil Nadu", "name": "Demo Lake Ward", "synthetic": true},
+    {"id": "IN-TN-MAD-L02", "district_id": "IN-TN-MAD", "district_name": "Madurai", "state_code": "TN", "state_name": "Tamil Nadu", "name": "Demo School Ward", "synthetic": true}
+  ],
+  "indicators": [
+    {"id": "IND-01", "locality_id": "IN-BR-PAT-L01", "category": "water", "population": 6000, "gap_pct": 70, "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"},
+    {"id": "IND-02", "locality_id": "IN-BR-PAT-L02", "category": "roads", "population": 9000, "gap_pct": 45, "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"},
+    {"id": "IND-03", "locality_id": "IN-MH-PUN-L01", "category": "sanitation", "population": 12000, "gap_pct": 60, "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"},
+    {"id": "IND-04", "locality_id": "IN-MH-PUN-L02", "category": "lighting", "population": 4500, "gap_pct": 35, "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"},
+    {"id": "IND-05", "locality_id": "IN-TN-MAD-L01", "category": "water", "population": 8000, "gap_pct": null, "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"},
+    {"id": "IND-06", "locality_id": "IN-TN-MAD-L02", "category": "education", "population": 7000, "gap_pct": 50, "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"}
+  ],
+  "plans": [
+    {"id": "PLAN-01", "locality_id": "IN-BR-PAT-L02", "category": "roads", "status": "funded", "description": "Invented road repair allocation; no real funding implied.", "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"},
+    {"id": "PLAN-02", "locality_id": "IN-MH-PUN-L01", "category": "sanitation", "status": "proposed", "description": "Invented drainage proposal awaiting review.", "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"},
+    {"id": "PLAN-03", "locality_id": "IN-TN-MAD-L02", "category": "education", "status": "in_progress", "description": "Invented classroom refurbishment plan.", "source_id": "SRC-DEMO-01", "as_of": "2026-09-30"}
+  ],
+  "seed_reports": [
+    {"id": "SEED-01", "locality_id": "IN-BR-PAT-L01", "category": "water", "language": "hi", "text": "हमारे मोहल्ले में कई दिनों से पानी नियमित नहीं आता। कृपया पानी की आपूर्ति ठीक कराएं।", "summary_en": "Residents report irregular water supply and request repairs.", "urgency": "elevated", "provider_mode": "fixture"},
+    {"id": "SEED-02", "locality_id": "IN-BR-PAT-L01", "category": "water", "language": "en", "text": "Water supply is unreliable in our locality. Please repair the supply system.", "summary_en": "A resident requests reliable water supply.", "urgency": "elevated", "provider_mode": "fixture"},
+    {"id": "SEED-03", "locality_id": "IN-BR-PAT-L02", "category": "roads", "language": "en", "text": "The road near the market needs repairs because of potholes.", "summary_en": "A market road needs pothole repairs.", "urgency": "routine", "provider_mode": "fixture"},
+    {"id": "SEED-04", "locality_id": "IN-MH-PUN-L01", "category": "sanitation", "language": "en", "text": "Blocked drains overflow after rain. Please arrange a drainage inspection.", "summary_en": "Residents request inspection of overflowing drains.", "urgency": "elevated", "provider_mode": "fixture"},
+    {"id": "SEED-05", "locality_id": "IN-MH-PUN-L02", "category": "lighting", "language": "hi", "text": "गली की बत्तियां बंद हैं। कृपया उन्हें ठीक कराएं।", "summary_en": "Street lights require repairs.", "urgency": "routine", "provider_mode": "fixture"},
+    {"id": "SEED-06", "locality_id": "IN-TN-MAD-L01", "category": "water", "language": "en", "text": "Please inspect the unreliable water supply in our locality.", "summary_en": "A resident requests inspection of the water supply.", "urgency": "routine", "provider_mode": "fixture"},
+    {"id": "SEED-07", "locality_id": "IN-TN-MAD-L02", "category": "education", "language": "en", "text": "The community school needs more usable classrooms.", "summary_en": "Residents request improved classroom availability.", "urgency": "routine", "provider_mode": "fixture"}
+  ]
+}

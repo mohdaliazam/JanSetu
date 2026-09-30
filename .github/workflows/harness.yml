@@ -1,0 +1,15 @@
+name: JanSetu harness integrity
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  blueprint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/harness.mjs validate
+      - run: node scripts/harness.test.mjs
+# This validates the blueprint only. P01/P08 must add actual application checks.

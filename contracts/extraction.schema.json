@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JanSetuExtractionV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["category", "summary_en", "language", "urgency", "evidence_quote", "needs_review", "review_reasons"],
+  "properties": {
+    "category": {"type": "string", "enum": ["water", "roads", "sanitation", "lighting", "education", "healthcare_access", "other"]},
+    "summary_en": {"type": "string", "minLength": 1, "maxLength": 400},
+    "language": {"type": "string", "enum": ["hi", "en", "mixed", "unknown"]},
+    "urgency": {"type": "string", "enum": ["routine", "elevated", "urgent"]},
+    "evidence_quote": {"type": "string", "minLength": 1, "maxLength": 500},
+    "needs_review": {"type": "boolean"},
+    "review_reasons": {"type": "array", "maxItems": 5, "items": {"type": "string", "minLength": 1, "maxLength": 200}}
+  }
+}

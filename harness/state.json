@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "target": "demo",
+  "updated_at": "2026-09-30T17:24:05.419Z",
+  "tasks": {
+    "P00": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P00-preflight.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T16:53:12.804Z",
+      "completed_at": "2026-09-30T16:54:04.591Z"
+    },
+    "P01": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P01-skeleton.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T16:54:10.615Z",
+      "completed_at": "2026-09-30T17:16:12.517Z"
+    },
+    "P02": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P02-data.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T17:16:28.689Z",
+      "completed_at": "2026-09-30T17:19:30.122Z"
+    },
+    "P03": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P03-extraction.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T17:20:51.186Z",
+      "completed_at": "2026-09-30T17:21:14.950Z"
+    },
+    "P04": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P04-grouping.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T17:19:53.908Z",
+      "completed_at": "2026-09-30T17:20:30.703Z"
+    },
+    "P05": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P05-briefs.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T17:21:19.968Z",
+      "completed_at": "2026-09-30T17:21:36.476Z"
+    },
+    "P06": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P06-ui.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T17:21:48.239Z",
+      "completed_at": "2026-09-30T17:22:21.719Z"
+    },
+    "P07": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P07-security.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T17:22:41.809Z",
+      "completed_at": "2026-09-30T17:22:53.505Z"
+    },
+    "P08": {
+      "status": "done",
+      "evidence": [
+        "harness/evidence/P08-release.json"
+      ],
+      "note": "",
+      "started_at": "2026-09-30T17:23:39.397Z",
+      "completed_at": "2026-09-30T17:24:05.418Z"
+    },
+    "P09": {
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    "P10": {
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    "X01": {
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    "X02": {
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    "X03": {
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    "X04": {
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  }
+}
